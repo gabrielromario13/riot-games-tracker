@@ -1,0 +1,55 @@
+﻿@page "/weather"
+@inject ILeaderboardService LeaderboardService
+
+<PageTitle>Weather</PageTitle>
+
+<h1>Weather</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+@if (leaderboard is null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Player</th>
+                <th>Ranked Rating</th>
+                <th>Tier</th>
+                <th>Wins</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var player in leaderboard.Players)
+            {
+                <tr>
+                    <td>@player.LeaderboardRank</td>
+                    <td>@player.Name#@player.Tag</td>
+                    <td>@player.RankedRating</td>
+                    <td>@player.CompetitiveTier</td>
+                    <td>@player.WinsCount</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private LeaderboardDto leaderboard = null!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        leaderboard = (await LeaderboardService.GetLeaderboardByAct(
+            new LeaderboardRequestDto
+            {
+                Episode = 3,
+                Act = 2,
+                Size = 200,
+                StartIndex = 0
+            }))!;
+    }
+}
