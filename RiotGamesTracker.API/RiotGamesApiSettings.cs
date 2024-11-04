@@ -2,5 +2,5 @@
 
 public static class RiotGamesApiSettings
 {
-    public const string API_KEY = "RGAPI-ed4cfc43-a760-46ab-9aa5-45d049d388d3";
+    public const string API_KEY = "RGAPI-7d546071-4686-438b-a406-344b01971ad0";
 }

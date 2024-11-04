@@ -1,7 +1,8 @@
 ﻿using RiotGamesTracker.Common.Dtos;
+using RiotGamesTracker.Common.Dtos.Requests;
 using System.Net.Http.Json;
 
-namespace RiotGamesTracker.Web.Services.Leaderboard;
+namespace RiotGamesTracker.Web.Services.LeaderboardService;
 
 public class LeaderboardService(HttpClient client) : ILeaderboardService
 {

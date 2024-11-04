@@ -8,7 +8,7 @@ public class LeaderboardDto
     public string ActId { get; set; } = string.Empty;
 
     [JsonPropertyName("players")]
-    public IEnumerable<PlayerDto> Players { get; set; } = [];
+    public IEnumerable<ValorantPlayerDto> Players { get; set; } = [];
 
     [JsonPropertyName("totalPlayers")]
     public int TotalPlayers { get; set; }

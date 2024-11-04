@@ -1,6 +1,7 @@
 ﻿using RiotGamesTracker.Common.Dtos;
+using RiotGamesTracker.Common.Dtos.Requests;
 
-namespace RiotGamesTracker.API.Services.Act;
+namespace RiotGamesTracker.API.Services.ActService;
 
 public class ActService : IActService
 {

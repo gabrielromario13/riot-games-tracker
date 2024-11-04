@@ -1,6 +1,4 @@
-﻿using System.Text.Json.Serialization;
-
-namespace RiotGamesTracker.Common.Dtos;
+﻿namespace RiotGamesTracker.Common.Dtos.Requests;
 
 public class LeaderboardRequestDto
 {

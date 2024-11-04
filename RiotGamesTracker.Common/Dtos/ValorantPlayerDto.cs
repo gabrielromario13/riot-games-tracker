@@ -2,7 +2,7 @@
 
 namespace RiotGamesTracker.Common.Dtos;
 
-public class PlayerDto
+public class ValorantPlayerDto
 {
     [JsonPropertyName("puuid")]
     public string Id { get; set; } = string.Empty;

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using RiotGamesTracker.API.Services.Leaderboard;
-using RiotGamesTracker.Common.Dtos;
+using RiotGamesTracker.API.Services.LeaderboardService;
+using RiotGamesTracker.Common.Dtos.Requests;
 
 namespace RiotGamesTracker.API.Controllers;
 
